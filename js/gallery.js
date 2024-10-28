@@ -73,8 +73,24 @@ gallery.addEventListener("click", (event) => {
   const imgElement = event.target.closest(".gallery-image");
   if (!imgElement) return;
 
+  // Велике зображення
+  const largeImageUrl = imgElement.dataset.source;
+  // Опис
+  const imageDescription = imgElement.alt;
+
+  // Модальне вікно
+  const modal = basicLightbox.create(`
+    <div class="modal">
+      <p class="modal-description">${imageDescription}</p>
+      <img src="${largeImageUrl}" alt="${imageDescription}" />
+    </div>
+  `);
+
+  // Відкриття модального вікна
+  modal.show();
+
   // Посилання на велике зображення
-  console.log(imgElement.dataset.source);
+  console.log(largeImageUrl);
 });
 
 // Розмітка
