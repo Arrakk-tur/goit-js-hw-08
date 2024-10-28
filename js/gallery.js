@@ -75,13 +75,12 @@ gallery.addEventListener("click", (event) => {
 
   // Велике зображення
   const largeImageUrl = imgElement.dataset.source;
-  // Опис
+  // Alt
   const imageDescription = imgElement.alt;
 
   // Модальне вікно
   const modal = basicLightbox.create(`
     <div class="modal">
-      <p class="modal-description">${imageDescription}</p>
       <img src="${largeImageUrl}" alt="${imageDescription}" />
     </div>
   `);

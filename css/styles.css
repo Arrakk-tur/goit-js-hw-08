@@ -29,3 +29,9 @@
   height: 100%;
   object-fit: cover;
 }
+
+.gallery-image:hover {
+  cursor:
+    url("/css/bxs_hand-down.svg") 16 16,
+    auto;
+}
